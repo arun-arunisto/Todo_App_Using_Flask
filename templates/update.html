@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .app-container {
+        height: 100vh;
+        width: 100%;
+      }
+      .complete {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="app-container d-flex align-items-center justify-content-center flex-column">
+      <h3>Update Todo</h3>
+      <div class="d-flex align-items-center mb-3">
+        <div class="form-group mr-3 mb-0">
+          <form action="/update/{{ todo.id }}" method="POST">
+          <input
+            type="text"
+            class="form-control" value="{{todo.content}}"
+            name="content"/>
+        </div>
+        <input type="submit" class="btn btn-primary mr-3" value="Update"/>
+          </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>
